@@ -235,7 +235,17 @@
 
         document.getElementById("img10").addEventListener("targetFound", event => {
             if (localStorage.getItem("dica") == 11) {
-                localStorage.setItem("dicaString", "<img class='padrao' src='./Festa.png' alt=''>");
+                localStorage.setItem("dicaString", "Charada: wqbsbcfot <br>b -> a");
+                localStorage.setItem("dica", 12);
+                abriModal()
+            } else {
+                reduzVida();
+            }
+        })
+
+        document.getElementById("img10").addEventListener("targetFound", event => {
+            if (localStorage.getItem("dica") == 12) {
+                localStorage.setItem("dicaString", "VOCÊ GANHOU!");
                 abriModal()
             } else {
                 reduzVida();
