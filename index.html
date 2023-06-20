@@ -108,7 +108,7 @@
         if (localStorage.getItem("dicaString")) {
             localStorage.setItem("dicaString", "<div class='padrao'>Bem-vindo ao enigma do milênio! Neste jogo você deve escanear imagens que são as respostas das charadas e/ou enigmas que serão propostos. A cada imagem escaneada errada, você perde uma vida! Você conta com 3 ao máximo. Tenha um bom jogo! <br>Charada: eu ilumino tudo ao meu redor, mas sem eletricidade eu sou só um objeto decorativo. O que sou eu?</div>");
         }
-        
+
         function fechaModal() {
             var alert1 = document.getElementById('alert')
             alert1.style.opacity = '0';
@@ -124,7 +124,7 @@
         function reduzVida() {
             alert("Você perdeu uma vida!")
             localStorage.setItem("vida", (localStorage.getItem("vida") - 1));
-            if(localStorage.getItem("vida") <= 0) {
+            if (localStorage.getItem("vida") <= 0) {
                 alert("Você perdeu!")
                 localStorage.setItem("dica", 1)
                 localStorage.setItem("vida", 3)
@@ -185,7 +185,7 @@
 
         document.getElementById("img5").addEventListener("targetFound", event => {
             if (localStorage.getItem("dica") == 6) {
-                localStorage.setItem("dicaString","<img class='padrao' src='./dica6.2.png' alt=''>");
+                localStorage.setItem("dicaString", "<img class='padrao' src='./dica6.2.png' alt=''>");
                 localStorage.setItem("dica", 7);
                 abriModal()
             } else {
@@ -243,7 +243,7 @@
             }
         })
 
-        for(let i = 0; i < 72; i++) {
+        for (let i = 0; i < 72; i++) {
             document.getElementById("img" + i).addEventListener("targetFound", event => {
                 reduzVida();
             })
